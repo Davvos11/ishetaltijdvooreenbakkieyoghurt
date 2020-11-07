@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<style type="text/css">
+		html, body{
+			margin: 0;
+			padding: 0;
+			background-image: url("/appa.jpg");
+			overflow: hidden;
+		}
+		#big{
+			height: 100vh;
+ 			display: block;
+ 			margin-left: auto;
+ 			margin-right: auto;
+ 			left: 0;
+ 			right: 0;
+ 			position: absolute;
+ 			z-index: 10000;
+		}
+		.small{
+			height: 10vh;
+			position: absolute;
+		}
+
+		.bounce {
+		  animation-duration: 2s;
+		  animation-fill-mode: both;
+		  animation-timing-function: linear;
+		  animation-iteration-count: infinite;
+		  animation-direction: alternate;
+		  animation-name: bounce;
+		}
+		@keyframes bounce {
+		  0% {
+		    transform: translateY(0) translateX(0);
+		  }
+		  50% {
+		    transform: translateY(50vh) translateX(25vw);
+		  }
+		  100% {
+		    transform: translateY(0) translateX(50vw);
+		  }
+		}
+	</style>
+	<title>Appa</title>
+	<script type="text/javascript">
+		function addBouncers() {
+			size = 40;
+			imgs = [[]];
+			for (var i = 0; i < size; i++) {
+				for (var j = 0; j < size; j++) {
+					imgs[i,j] = document.createElement("IMG");
+					if (i % 2 == 0 && j % 2 == 1) {
+						imgs[i,j].src = "/momo.png";
+					}
+					else {
+						imgs[i,j].src = "/appa.jpg";
+					}
+					imgs[i,j].className = "small bounce";
+					imgs[i,j].style.marginLeft = (-50)+i*5+"vw";
+					imgs[i,j].style.marginTop = (-50)+j*12+"vh";
+
+					document.body.appendChild(imgs[i,j])
+				}
+			}
+		}
+	</script>
+</head>
+<body onload="addBouncers()">
+	<img src="/appa.jpg" id="big" />
+	
+	<!-- <img src="/appa.jpg" class="small bounce" style="margin-left: 0vw; margin-top: -10vh" /> -->
+</body>
+</html>

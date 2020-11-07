@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Is het al tijd voor een bakkie yoghurt</title>
+    <link rel="icon" href="bakkie.png" type="image/png">
+    <link rel="stylesheet" type="text/css" href="style.css?v=4.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="index.js?v=2.3"></script>
+    <script type="text/javascript" src="theme.js?v=4.0"></script>
+    <!-- test -->
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="settings">
+       <input type="checkbox" id="darktheme" class="settingbox" onchange="toggleTheme()" checked> <label for="darktheme">Dark mode</label>
+       <input type="checkbox" id="darttheme" class="settingbox" onchange="dart()"> <label for="darttheme">Dart mode</label>
+       <input type="checkbox" id="rainbow" class="settingbox" onchange="toggleTheme()"> <label for="rainbow" >Rainbow mode</label>
+       <input type="checkbox" id="mctime" class="settingbox" onchange="updatetime()"> <label for="mctime" >Minecraft times</label>
+      </div>
+      <header>
+        <h1>Is het al tijd voor een bakkie yoghurt?</h1>
+        <h2 id="waarheid">Ja!</h2>
+        <h3>Het is <span id="tijd"></span>, dus het is<span id="geen"></span> tijd voor een bakkie yoghurt</h3>
+      </header>
+      <content>
+       <h3>
+         <br><br><br><br><br><br>
+         "Ik parkeer hem even op de stoep om wat yoghurt te eten" - David Vos
+        </h3>
+      </content>
+      <img id="dart" src="/dart.png">
+    </div>
+  </body>
+</html>

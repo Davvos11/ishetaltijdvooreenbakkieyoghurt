@@ -1,0 +1,93 @@
+:root {
+	--fg-color: black;
+	--bg-color: white;
+}
+[data-theme="dark"] {
+	--fg-color: white;
+	--bg-color: black;
+}
+
+@font-face{
+	font-family: "Comic Sans MS";
+	src: url('ComicSansMS3.ttf')  format('truetype');
+}
+
+
+body{
+	background-color: var(--bg-color);
+	color: var(--fg-color)
+}
+#wrapper{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	left: 0; right: 0; top: 0; bottom: 0;
+}
+
+.rainbow{
+	background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+	background-size: 1800vh 1800vh;
+	animation: rainbow 18s linear, rainbowtext 18s linear alternate;
+	animation-iteration-count: infinite;
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	color: lime;
+}
+.epilepsy{
+	animation: rainbow 0.1s linear, rainbowtext 0.1s linear alternate;
+	animation-iteration-count: infinite;
+}
+@keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+/*#dd00f3, #dd00f3, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8*/
+@keyframes rainbowtext {
+	0% {color: #1de840;}
+	12.5% {color: #1ddde8;}
+	25% {color: #2b1de8;}
+	35.5% {color: #dd00f3;}
+	50% {color: #dd00f3;}
+	62.5% {color: #ff2400}
+	75% {color: #e81d1d;}
+	87.5% {color: #e8b71d;}
+	100% {color: #e3e81d}
+}
+
+#settings{
+	display: flex;
+	/*position: absolute;*/
+}
+.settingbox{
+	margin-top: 2px;
+}
+#settings label {
+	margin-right: 2vw;
+}
+
+header {
+	text-align: center;
+} 
+header h2{
+	font-size: 100pt;
+}
+
+h1, h2, h3{
+	margin: 2px;
+}
+
+header img{
+	width: 75vw;
+}
+
+content{
+	text-align: center;
+}
+
+#dart{
+	position: absolute;
+	width: 100vw;
+	height: 100vh;
+	top: 0; left: 0;
+	pointer-events: none;
+}
